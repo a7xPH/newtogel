@@ -1,4 +1,4 @@
-extends layout
+extends templates/layout
 
 block styles
   link(rel="stylesheet" href="../css/style.css")
@@ -17,7 +17,7 @@ block content
   - var devicePath = "../images/devices.png"
   - var welcomePath = "../images/welcome-img.png"
 
-  include top-layout
+  include templates/top-layout
 
   section.main-content
     .container
@@ -47,9 +47,9 @@ block content
               p.mobwap-title WAP
               p.mobwap-content Anda pun dapat mengakses situs http://wap.nusatogel.com kami yang lebih cocok untuk anda akses apabila anda menggunakan handphone/mobile yang masih memiliki kendala / berat untuk mengakses situs mobile m.nusatogel.com kami.
 
-  include welcome
+  include templates/welcome
 
-  include footer
+  include templates/footer
 
 block scripts
   script(src="../js/tweenmax.js")
