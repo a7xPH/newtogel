@@ -1,0 +1,35 @@
+.content-v2
+  .content-text.full-width
+    .group-text
+      p Struktur = ABCD
+      p Jika Menebang posisi Depan maka yang menjadi fokus adalah AB
+      p Jika Menebang posisi Tengah maka yang menjadi fokus adalah BC
+      p Jika Menebang posisi Belakang maka yang menjadi fokus adalah CD
+
+    .group-text
+      p KEMBANG jika A &lt; B ataupun B &lt; C ataupun C &lt; D
+      p KEMPIS jika A &gt; B ataupun B &gt; C ataupun C &gt; D
+      p KEMBAR jika A = B ataupun B = C ataupun C = D
+
+    .group-text
+      p.bold Analisis I: Beli Posisi Depan
+      p Keluar : 4321
+      p Yang menjadi pedoman adalah posisi Depan, berarti 43
+      p 43 =&gt; 4 &gt; 3, hasil = KEMPIS
+
+    .group-text
+      p.bold Analisis II: Keluar : 4236 Beli Posisi Tengah
+      p Yang menjadi pedoman adalah posisi Tengah, berarti 23
+      p 23 =&gt; 2 &lt; 3, hasil = KEMBANG
+
+    .group-text
+      p.bold Analisis III: Beli Posisi Belakang
+      p Keluar : 4099
+      p Yang menjadi pedoman adalah posisi Belakang, berarti 99
+      p 99 =&gt; Hasil = KEMBAR
+
+    .group-text
+      p Jika dilakukan pembelian dengan 100rb dan menang maka:
+      p Menang = 100rb + [Indeks kemenangan untuk KEMBANG-KEMPIS]
+
+    p.group-text NB: Indeks menang dan diskon dapat dilihat di bagian Peraturan

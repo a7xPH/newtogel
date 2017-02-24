@@ -3,6 +3,14 @@ extends layout
 block styles
   link(rel="stylesheet" href="../css/style.css")
 
+  <!--[if IE 8]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+  <!--[if IE 9]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+
+
 block content
   - var links = [{name: "Home", href: "/"}, {name: "Panduan"}, {name: "Hasil Lengkap"}, {name: "FAQ"}, {name: "Nawala"}, {name: "Referral"}, {name: "Lupa Password"}];
   - var label = "Panduan"

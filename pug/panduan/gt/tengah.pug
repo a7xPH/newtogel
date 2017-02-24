@@ -1,0 +1,28 @@
+.content-v2
+  .content-text.full-width
+    .group-text
+      p Menebak tengah/tepi dari posisi 2D
+      p Tengah= Diantara 25 sampai 74
+      p Tepi =Diantara 00 sampai 24 dan 75 sampai 99
+
+    p.group-text Struktur: ABCD
+
+    .group-text
+      p.bold Analisis I:
+      p Keluar : 4321
+      p Permainan ini hanya memperhatikan posisi 2D, berarti yang dipedomani = 21
+      p 21 = TEPI
+      p Misalnya dibeli posisi TEPI dengan nilai 100rb.
+      p Berarti menang:
+      p 100rb + [Indeks kemenangan untuk tepi-tengah] + Kei
+
+    .group-text
+      p.bold Analisis II:
+      p Keluar : 4356
+      p Permainan ini hanya memperhatikan posisi 2D, berarti yang dipedomani =56
+      p 56 = TENGAH
+      p Misalnya dibeli posisi TENGAH dengan nilai 100rb.
+      p Berarti menang:
+      p 100rb + [Indeks kemenangan untuk tepi-tengah] + Kei
+
+    p.group-text NB: Indeks menang dan diskon dapat dilihat di bagian Peraturan

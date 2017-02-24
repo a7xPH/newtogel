@@ -373,7 +373,8 @@ section.main-content {
   section.main-content .container {
     min-height: 480px;
     background: white;
-    position: relative; }
+    position: relative;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5); }
     section.main-content .container #main-links {
       position: absolute;
       right: 10px;
@@ -445,6 +446,8 @@ section.main-content {
         section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 {
           position: relative;
           margin-top: 18px; }
+          section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2.gametogel .tab-content-v2 {
+            height: 347px; }
           section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 {
             position: absolute;
             padding-right: 20px;
@@ -461,6 +464,8 @@ section.main-content {
               section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text {
                 float: left;
                 width: 48%; }
+                section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text.full-width {
+                  width: 100%; }
                 section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text p.div--cont-title {
                   font-size: 24px;
                   font-weight: 600;
@@ -470,8 +475,10 @@ section.main-content {
                   line-height: 20px;
                   font-size: 14px;
                   font-weight: 600; }
+                section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text .instr {
+                  margin-top: 35px; }
                 section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol {
-                  margin-left: 20px;
+                  margin-left: 16px;
                   margin-bottom: 15px;
                   list-style: decimal; }
                   section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol li {
@@ -479,6 +486,42 @@ section.main-content {
                     font-size: 14px;
                     line-height: 20px;
                     margin-bottom: 5px; }
+                  section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw {
+                    margin-top: 30px;
+                    margin-left: 20px; }
+                    section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw li {
+                      font-size: 20px; }
+                      section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw li:not(:first-child) {
+                        margin-top: 20px; }
+                      section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw li p.bold {
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 2px; }
+                      section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw li ul {
+                        margin-top: 10px; }
+                        section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw li ul li {
+                          margin: 15px 0 0 !important;
+                          font-size: 14px; }
+                          section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw li ul li ul {
+                            margin-top: 0; }
+                            section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text ol.list-withdraw li ul li ul li {
+                              margin: 0 !important; }
+                section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text .group-text {
+                  font-size: 14px;
+                  line-height: 20px;
+                  margin-bottom: 15px;
+                  text-align: justify; }
+                  section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text .group-text.plus-margin {
+                    margin-top: 30px; }
+                  section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text .group-text p.group-title {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 10px; }
+                  section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text .group-text p.red {
+                    color: red; }
+                  section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-text .group-text ul {
+                    list-style: disc;
+                    margin-left: 20px; }
               section.main-content .container #main-content .tab-content .tab-content--of--tab-content-v2 .tab-content-v2 .content-v2 .content-img {
                 position: absolute;
                 top: 0;

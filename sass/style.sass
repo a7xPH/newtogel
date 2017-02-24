@@ -380,6 +380,7 @@ section.main-content
     min-height: 480px
     background: white
     position: relative
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.5)
 
     #main-links
       position: absolute
@@ -471,6 +472,9 @@ section.main-content
           position: relative
           margin-top: 18px
 
+          &.gametogel .tab-content-v2
+            height: 347px
+
           .tab-content-v2
             position: absolute
             padding-right: 20px
@@ -490,6 +494,9 @@ section.main-content
                 float: left
                 width: 48%
 
+                &.full-width
+                  width: 100%
+
                 p.div--cont-title
                   font:
                     size: 24px
@@ -503,18 +510,72 @@ section.main-content
                     size: 14px
                     weight: 600
 
+                .instr
+                  margin-top: 35px
+
                 ol
                   margin:
-                    left: 20px
+                    left: 16px
                     bottom: 15px
                   list-style: decimal
-
 
                   li
                     text-align: justify
                     font-size: 14px
                     line-height: 20px
                     margin-bottom: 5px
+
+                  &.list-withdraw
+                    margin:
+                      top: 30px
+                      left: 20px
+
+                    li
+                      font-size: 20px
+
+                      &:not(:first-child)
+                        margin-top: 20px
+
+                      p.bold
+                        font:
+                          size: 14px
+                          weight: 600
+                        margin-bottom: 2px
+
+                      ul
+                        margin-top: 10px
+
+                        li
+                          margin: 15px 0 0 !important
+                          font-size: 14px
+
+                          ul
+                            margin-top: 0
+
+                            li
+                              margin: 0 !important
+
+                .group-text
+                  font-size: 14px
+                  line-height: 20px
+                  margin-bottom: 15px
+                  text-align: justify
+
+                  &.plus-margin
+                    margin-top: 30px
+
+                  p.group-title
+                    font:
+                      size: 18px
+                      weight: 600
+                    margin-bottom: 10px
+
+                  p.red
+                    color: red
+
+                  ul
+                    list-style: disc
+                    margin-left: 20px
 
 
               .content-img
