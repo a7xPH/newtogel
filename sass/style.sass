@@ -1,0 +1,770 @@
+@import "include/bourbon"
+@import "include/reset"
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+
+$open-sans: 'Open Sans', sans-serif
+
+*
+  +box-sizing(border-box)
+
+html, body
+  height: 100%
+
+body
+  background-image: url("../images/background.jpg")
+  // background-image: url("../images/gradients/background.jpg")
+  // +background(linear-gradient(to top, #b45a0d 0% , #be6d10 13%, #cb871b 28%, #e3a12d 48%, #f0b239 68%, #ffcc55 87%))
+  background:
+    size: 100% 100%
+    repeat: repeat-x
+    attachment: fixed
+  font-family: $open-sans
+
+=ul-styles
+  ul
+    float: right
+    margin: 10px 0
+
+    li
+      float: left
+
+      &:not(:first-child)
+        margin-left: 24px
+
+      &.active a
+        font-weight: 600
+
+      &.daftar, &.signin
+        border:
+          width: 1px
+          style: solid
+          radius: 5px
+        box-shadow: inset 0 1px 1px rgba(255,255,255,0.8)
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+
+        a
+          padding: 6px 20px
+          text-transform: uppercase
+          font:
+            size: 11px
+            weight: 600
+          line-height: 16px
+          color: white
+
+      &.daftar
+        border-color: #033303
+        margin-left: 8px
+        background: #288e28
+
+      &.signin
+        border-color: #03035f
+        background: #2c2ce6
+
+      a
+        display: inline-block
+        font-size: 13px
+        line-height: 19px
+        color: white
+
+.container
+  width: 1000px
+  margin: 0 auto
+  display: table
+
+nav#top-navbar
+  position: fixed
+  top: -60px
+  left: 0
+  width: 100%
+  height: 60px
+  background: #dcb400
+  +background(linear-gradient(rgba(220, 180, 0, 0.92), rgba(177, 131, 25, 0.92)))
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3)
+  z-index: 9999
+
+  .container
+    p.name
+      float: left
+      line-height: 58px
+      text-transform: uppercase
+      font:
+        size: 20px
+        weight: 700
+      letter-spacing: 1px
+      color: #fff
+
+    +ul-styles
+
+    ul
+      margin: 0
+
+      li
+        line-height: 58px
+
+        &.signin, &.daftar
+          margin-top: -2px
+          background: none
+          border-color: transparent
+
+          a
+            border:
+              width: 1px
+              style: solid
+              radius: 5px
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8)
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+
+        &.signin a
+          background: #2c2ce6
+          border-color: #03035f
+
+        &.daftar a
+          background: #288e28
+          border-color: #033303
+
+        a
+          color: black
+
+header, section, footer
+  display: table
+  width: 100%
+
+header
+  .container
+    display: table
+
+    .logo
+      height: 120px
+      width: 200px
+      background: black
+      float: left
+
+    .navigation-menu
+      display: table
+      float: right
+
+      .top
+        margin-top: 12px
+        display: table
+        width: 100%
+
+        .devices
+          float: left
+          margin-top: 20px
+
+          img.device
+            height: 18px
+
+          p
+            float: left
+            margin-right: 15px
+            line-height: 28px
+            font:
+              size: 12px
+              weight: 700
+            color: white
+            text-transform: uppercase
+            letter-spacing: 0.5px
+
+      +ul-styles
+
+section.promotion
+  margin: 10px 0 20px
+
+  .container
+    height: 480px
+    +box-sizing(border-box)
+    position: relative
+
+    .pr-img
+      position: absolute
+      z-index: -1
+
+      .pr--img-v
+        width: 1000px
+
+        img.woman-with-cp
+          position: absolute
+          top: -21px
+          left: 120px
+
+        .pr-content
+          position: absolute
+          right: 0
+          top: 40px
+
+          .access
+            text-transform: uppercase
+            width: 445px
+            font:
+              size: 60px
+              weight: 700
+            color: #383838
+
+          .devices
+            float: right
+            margin-top: 30px
+            width: 80px
+
+    .promotion
+      margin-top: 275px
+      display: table
+      width: 100%
+
+      div.ls-res
+        float: left
+        width: 662px
+        height: 200px
+        background: #865f1a
+        background: rgba(0,0,0,0.3)
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2)
+        border: 1px solid white
+          radius: 6px
+        overflow: hidden
+
+        .ls
+          width: 50%
+          float: left
+
+          .tabs
+            display: table
+            width: 100%
+
+            .tablinks
+              display: table
+              width: 100%
+              position: relative
+              z-index: 999
+              box-shadow: 0 1px 4px rgba(0,0,0,0.5)
+
+            p.label
+              width: 100px
+              text-align: center
+              padding: 10px 0
+              float: left
+              background: #f5bc37
+              color: #3a2800
+              font:
+                size: 12px
+                weight: 700
+              text-transform: uppercase
+
+            .links
+              float: right
+              width: 230px
+
+              a
+                background: #081957
+                color: white
+                display: inline-block
+                font:
+                  size: 12px
+                  weight: 600
+                padding: 10px 20.25px
+                text-align: center
+                +transition(all 0.3s linear)
+
+                &:hover
+                  background: #1e3898
+
+                &.active
+                  background: #3855c1
+
+            .tabcontents
+              #twentyfour, #thirtysix, #blackred
+                display: none
+
+                &.active
+                  display: block
+
+                img
+                  width: 100%
+
+        .res
+          width: 50%
+          height: 100%
+          background: rgba(0, 0, 0, 0.3)
+          float: right
+          border-left: 1px solid #eee
+
+          .res--content
+            height: 66.66666666666667px
+            width: 100%
+            overflow: hidden
+            padding: 10px 15px
+
+            &:not(:first-child)
+              border-top: 1px solid #b5b5b5
+
+            .title-date
+              display: table
+              width: 100%
+              margin-bottom: 2px
+
+              .date
+                float: right
+                font-size: 12px
+                color: white
+
+              .content-title
+                color: #ffde91
+                float: left
+                font:
+                  size: 16px
+                  weight: 700
+                text-transform: uppercase
+
+            .periode-balls
+              display: table
+              width: 100%
+
+              .periode
+                margin-top: 7px
+                float: left
+                font-size: 13px
+                letter-spacing: 1px
+                text-transform: uppercase
+                color: white
+
+              .balls
+                float: right
+
+                p
+                  float: left
+                  border: 1px solid #d09124
+                  border-radius: 50%
+                  background: #ffcc55
+                  +size(28px)
+                  text-align: center
+                  line-height: 26px
+                  font-size: 12px
+
+
+                  &:not(:first-child)
+                    margin-left: 10px
+
+              .periode, .balls
+                font-size: 14px
+
+      .promotion-holder
+        height: 200px
+        float: right
+        width: 284px
+        position: relative
+
+        .banks
+          position: absolute
+          width: 100%
+          bottom: 10px
+
+          .top, .bottom
+            display: table
+            width: 100%
+
+            img
+              float: right
+
+              &:first-child
+                float: left
+
+          .top
+            margin-bottom: 20px
+
+          img
+            height: 34px
+
+section.main-content
+  margin: 40px 0 15px
+
+  .container
+    min-height: 480px
+    background: white
+    position: relative
+
+    #main-links
+      position: absolute
+      right: 10px
+      top: -23px
+
+      a
+        padding: 7px 12px 5px
+        margin: 0 8px
+        background: #c7c7c7
+        font-size: 13px
+        text-transform: uppercase
+        position: relative
+        z-index: 1
+
+        &:before, &:after
+          content: ""
+          position: absolute
+          top: 0
+
+        &:before
+          border:
+            left: 13px solid transparent
+            bottom: 30px solid #c7c7c7
+          left: -13px
+
+        &:after
+          border:
+            right: 13px solid transparent
+            bottom: 30px solid #c7c7c7
+          right: -13px
+          +filter(drop-shadow(1px 0 rgba(0, 0, 0, 0.4)))
+
+        &.active
+          background: white
+          z-index: 999 !important
+          box-shadow: none
+
+          &:before
+            border-bottom-color: white
+
+          &:after
+            border-bottom-color: white
+
+    #main-content
+      padding: 20px
+      position: relative
+
+      .tab-content
+        position: absolute
+        top: 22px
+        right: 0
+        left: 20px
+        display: none
+        opacity: 0
+
+        &.active
+          display: block
+          opacity: 1
+
+        .tab-link--of--tab-content
+          margin-right: 20px
+
+          a
+            display: inline-block
+            text-transform: uppercase
+            font:
+              size: 14px
+              weight: 600
+            color: #212121
+            padding: 6px 12px
+            margin-bottom: 10px
+            background: #ececec
+            border: 1px solid #9e9e9e
+              radius: 5px
+
+            &:hover
+              color: black
+
+            &:not(:last-child)
+              margin-right: 7px
+
+            &.tab-active
+              background: #081957
+              padding: 6px 12px
+              color: white
+
+        .tab-content--of--tab-content-v2
+          position: relative
+          margin-top: 18px
+
+          .tab-content-v2
+            position: absolute
+            padding-right: 20px
+            top: 0
+            width: 100%
+            height: 385px
+            overflow-y: auto
+            display: none
+            opacity: 0
+
+            .content-v2
+              display: table
+              width: 100%
+              position: relative
+
+              .content-text
+                float: left
+                width: 48%
+
+                p.div--cont-title
+                  font:
+                    size: 24px
+                    weight: 600
+                  margin-bottom: 15px
+
+                p.note
+                  text-align: justify
+                  line-height: 20px
+                  font:
+                    size: 14px
+                    weight: 600
+
+                ol
+                  margin:
+                    left: 20px
+                    bottom: 15px
+                  list-style: decimal
+
+
+                  li
+                    text-align: justify
+                    font-size: 14px
+                    line-height: 20px
+                    margin-bottom: 5px
+
+
+              .content-img
+                position: absolute
+                top: 0
+                right: 0px
+                width: 47%
+
+                img
+                  width: 100%
+
+                p
+                  font:
+                    size: 12px
+                    style: italic
+                  color: #929292
+                  margin-top: 5px
+
+            &.tab-content-v2-active
+              display: block
+              opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .mobwap
+          display: table
+          width: 100%
+          margin-top: 6px
+          padding-right: 20px
+
+          .mobwap--content
+            width: 48%
+            float: right
+
+            &:first-child
+              float: left
+
+            p.mobwap-title
+              text-align: center
+              font:
+                size: 30px
+                weight: 600
+              margin-bottom: 18px
+              color: #081957
+
+            p.mobwap-content
+              font-size: 14px
+              line-height: 24px
+              text-align: justify
+              color: #212121
+
+
+
+section.welcoming
+  padding: 45px 0
+  background: #081958
+    image: url("../images/sunray.png")
+    size: cover
+    repeat: no-repeat
+    position: center
+  box-shadow: 0px 0px 40px rgba(0,0,0,0.3)
+
+  .container
+    display: table
+
+    .content-holder
+      float: left
+      width: 662px
+
+      p.title
+        font-size: 24px
+        margin-bottom: 15px
+        color: #edcf57
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7)
+
+      p.content
+        font:
+          size: 14px
+          weight: 300
+        line-height: 22px
+        text-align: justify
+        color: white
+
+    .anyimg
+      float: right
+      width: 284px
+      height: 197px
+      text-align: right
+
+      img
+        width: 100%
+        margin:
+          top: 10px
+          bottom: 40px
+
+      a
+        background: #d7ab4e
+        +background(linear-gradient(#e49d1c, #d2b266))
+        padding: 11px 30px 12px
+        text-transform: uppercase
+        border: 1px solid #033303
+          radius: 5px
+        box-shadow: inset 0 1px 1px rgba(255,255,255,0.8)
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+        color: white
+        font:
+          size: 16px
+          weight: 600
+        letter-spacing: 1.25px
+        cursor: pointer
+
+footer
+  padding: 45px 0
+  background: #ffd574
+  +background(linear-gradient(rgba(255, 231, 174, 0.93), #ffcc55))
+
+  .container
+    display: table
+
+    .div-half
+      width: 284px
+      float: right
+
+      &:first-child
+        width: 66%
+        float: left
+        padding: 34px 0 0
+
+        p
+          font-size: 14px
+          line-height: 24px
+          text-align: justify
+
+          &.copyright
+            margin-top: 15px
+            font:
+              size: 12px
+              weight: 600
+
+      .div-half-2
+        width: 46%
+        height: 100%
+        float: right
+
+        &:first-child
+          float: left
+
+        .title
+          font:
+            size: 16px
+            weight: 700
+          text-transform: uppercase
+          padding-bottom: 7px
+          margin-bottom: 10px
+          border-bottom: 1px solid black
+          box-shadow: inset 0 -1px rgba(0,0,0,0.6)
+
+        ul
+          li
+            font-size: 14px
+            line-height: 24px
+            color: #212121
+
+            a
+              color: #212121
+
+            &.active a
+              font-weight: 700
+
+          &.banks
+            li
+              display: table
+              width: 100%
+
+              p
+                float: left
+
+              span
+                float: right
+                text-transform: uppercase
+                font:
+                  size: 10px
+                line-height: 24px
+                letter-spacing: 1px
+
+                &.online
+                  color: #005a00
+                  +animation(2s online linear infinite)
+
+                &.offline
+                  color: #960000
+                  +animation(2s offline linear infinite)
+
+                &.problem
+                  color: #960000
+                  +animation(2s offline linear infinite)
+
++keyframes(online)
+  0%
+    text-shadow: 0px 0px 10px green
+
+  50%
+    text-shadow: none
+
+  100%
+    text-shadow: 0px 0px 10px green
+
++keyframes(offline)
+  0%
+    text-shadow: 0px 0px 10px red
+
+  50%
+    text-shadow: none
+
+  100%
+    text-shadow: 0px 0px 10px red
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.deleteme

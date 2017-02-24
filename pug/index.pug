@@ -1,0 +1,100 @@
+extends layout
+
+block styles
+  link(rel="stylesheet" href="css/style.css")
+
+block content
+  - var links = [{name: "Home"}, {name: "Panduan", href: "html/panduan.html"}, {name: "Hasil Lengkap"}, {name: "FAQ"}, {name: "Nawala"}, {name: "Referral"}, {name: "Lupa Password"}];
+  - var label = "Home"
+  - var devicePath = "images/devices.png"
+  - var welcomePath = "images/welcome-img.png"
+
+  include top-layout
+
+  section.promotion
+    .container
+      .pr-img
+        .pr--img-v
+          //- img.woman-with-cp(src="images/test-bg.png")
+
+          //- .pr-content
+          //-   p.access Accessible to all Devices
+          //-
+          //-   img.devices(src="images/devices.png")
+
+      .promotion
+        div.ls-res
+          .ls
+            .tabs
+              .tablinks
+                p.label Dingdong
+
+                .links#tablinks
+                  a.active(data-content="twentyfour") 24D
+                  a(data-content="thirtysix") 36D
+                  a(data-content="blackred") Black - Red
+
+              .tabcontents
+                #twentyfour.active
+                  img(src="images/sample.png")
+
+                #thirtysix
+                  img(src="images/test-36d.png")
+
+                #blackred
+                  img(src="images/test-br.png")
+
+          .res
+            .res--content
+              .title-date
+                p.content-title Dingdong 24D
+                p.date Sabtu, 03-09-2016
+
+              .periode-balls
+                p.periode Periode 24D:91
+
+                .balls
+                  p 23
+
+            .res--content
+              .title-date
+                p.content-title Dingdong 36D
+                p.date Rabu, 31-08-2016
+
+              .periode-balls
+                p.periode Periode 36D:5
+
+                .balls
+                  p 28
+
+            .res--content
+              .title-date
+                p.content-title Dingdong BLACK RED
+                p.date Rabu, 31-08-2016
+
+              .periode-balls
+                p.periode Periode BR:16
+
+                .balls
+                  p 2
+                  p 1
+                  p 4
+
+        div.promotion-holder
+          .banks
+            .top
+              img(src="images/fs/bca.png")
+              img(src="images/fs/mandiri.png")
+
+            .bottom
+              img(src="images/fs/bni.png")
+              img(src="images/fs/bri.png")
+
+  include welcome
+
+  include footer
+
+block scripts
+  script(src="js/tweenmax.js")
+  script(src="js/home.js")
+  script(src="../js/app.js")

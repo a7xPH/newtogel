@@ -1,0 +1,33 @@
+mixin listDataLinks
+  each link, index in links
+    if (links[index].name == label)
+      li.active: a(href="#")= links[index].name
+    else
+      li: a(href=links[index].href)= links[index].name
+
+nav#top-navbar
+  .container
+    p.name NusaTogel
+
+    ul
+      +listDataLinks
+
+      li.signin: a Sign In
+      li.daftar: a Daftar
+
+header
+  .container
+    .logo#logo
+
+    .navigation-menu
+      .top
+        .devices
+          p Available to
+          img.device(src= devicePath)
+
+        ul
+          li.signin: a Sign In
+          li.daftar: a Daftar
+
+      ul
+        +listDataLinks
