@@ -429,6 +429,9 @@ section.main-content
       padding: 20px
       position: relative
 
+      &.hasil .tab-content
+        top: 40px
+
       .tab-content
         position: absolute
         top: 22px
@@ -436,6 +439,60 @@ section.main-content
         left: 20px
         display: none
         opacity: 0
+
+        &.five
+          .header p, .body table tr td
+            width: 20%
+
+        .header
+          position: absolute
+          top: 0
+          width: 960px
+          height: 35px
+          background: #081957
+
+          p
+            float: left
+            width: 33.33333333333333%
+            text:
+              align: center
+              shadow: 1px 1px 1px rgba(0,0,0,0.5)
+            line-height: 35px
+            font:
+              size: 14px
+              weight: 600
+            color: #ffca00
+
+        .body
+          width: 960px
+          max-height: 384px
+          overflow-y: auto
+          margin-top: 35px
+          border:
+            width: 0 1px 1px 1px
+            style: solid
+            color: #d4d4d4
+          border-bottom-color: #adadad
+
+          table
+            width: 100%
+
+            tr
+              background: #f9f9f9
+
+              &:nth-child(even)
+                background: #edcf57
+
+              td
+                width: 33.33333333333333%
+                text-align: center
+                padding: 10px 0
+                font-size: 13px
+
+                a
+                  font-weight: 700
+                  color: #081957
+
 
         &.active
           display: block

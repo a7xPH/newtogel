@@ -7,9 +7,9 @@
     var _scr = this.scrollY || this.pageYOffset;
 
     if(_scr >= _logoHeight) {
-      TweenMax.to(_topNav, 0.3, { top: 0 });
+      TweenMax.to(_topNav, 0.5, { top: 0 });
     } else {
-      TweenMax.to(_topNav, 0.3, { top: -60 });
+      TweenMax.to(_topNav, 0.5, { ease: Power2.easeOut, top: -60 });
     }
   }
 })();

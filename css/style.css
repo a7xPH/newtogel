@@ -412,6 +412,8 @@ section.main-content {
     section.main-content .container #main-content {
       padding: 20px;
       position: relative; }
+      section.main-content .container #main-content.hasil .tab-content {
+        top: 40px; }
       section.main-content .container #main-content .tab-content {
         position: absolute;
         top: 22px;
@@ -419,6 +421,46 @@ section.main-content {
         left: 20px;
         display: none;
         opacity: 0; }
+        section.main-content .container #main-content .tab-content.five .header p, section.main-content .container #main-content .tab-content.five .body table tr td {
+          width: 20%; }
+        section.main-content .container #main-content .tab-content .header {
+          position: absolute;
+          top: 0;
+          width: 960px;
+          height: 35px;
+          background: #081957; }
+          section.main-content .container #main-content .tab-content .header p {
+            float: left;
+            width: 33.33333333333333%;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            line-height: 35px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffca00; }
+        section.main-content .container #main-content .tab-content .body {
+          width: 960px;
+          max-height: 384px;
+          overflow-y: auto;
+          margin-top: 35px;
+          border-width: 0 1px 1px 1px;
+          border-style: solid;
+          border-color: #d4d4d4;
+          border-bottom-color: #adadad; }
+          section.main-content .container #main-content .tab-content .body table {
+            width: 100%; }
+            section.main-content .container #main-content .tab-content .body table tr {
+              background: #f9f9f9; }
+              section.main-content .container #main-content .tab-content .body table tr:nth-child(even) {
+                background: #edcf57; }
+              section.main-content .container #main-content .tab-content .body table tr td {
+                width: 33.33333333333333%;
+                text-align: center;
+                padding: 10px 0;
+                font-size: 13px; }
+                section.main-content .container #main-content .tab-content .body table tr td a {
+                  font-weight: 700;
+                  color: #081957; }
         section.main-content .container #main-content .tab-content.active {
           display: block;
           opacity: 1; }
