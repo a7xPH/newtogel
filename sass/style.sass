@@ -406,16 +406,18 @@ section.main-content
           li
             font-size: 14px
             line-height: 20px
+            text-align: justify
 
             &:not(:first-child)
               margin-top: 20px
 
             p.question
               font-weight: 600
-              color: #0000c1
+              color: #020d33
 
             .answer
               margin-top: 10px
+              
               ul
                 list-style: disc
                 margin:
@@ -425,6 +427,25 @@ section.main-content
                 li
                   margin: 0
                   font-weight: 600
+
+      .group-content
+        padding-top: 20px
+
+        p.g-title
+          font:
+            family: $raleway
+            size: 18px
+            weight: 600
+          margin-bottom: 5px
+
+        .g-content
+          p, ol
+            font-size: 14px
+            line-height: 20px
+
+          ol
+            list-style: decimal
+            margin-left: 15px
 
     #main-links
       position: absolute
@@ -474,7 +495,7 @@ section.main-content
       position: relative
 
       &.hasil .tab-content
-        top: 40px
+        top: 30px
 
       .tab-content
         position: absolute
@@ -488,12 +509,54 @@ section.main-content
           .header p, .body table tr td
             width: 20%
 
+        .top-toolbar
+          height: 50px
+          width: 960px
+
+          .search-bar
+            float: left
+
+            input
+              background:
+                image: url("../images/search.png")
+                size: 23px 23px
+                position: 2px 2px
+                repeat: no-repeat
+              font-size: 12px
+              padding: 7px 10px 7px 28px
+              width: 180px
+              border: 1px solid #dadada
+                radius: 3px
+
+          .pagination
+            float: right
+
+            a
+              display: inline-block
+              +size(30px)
+              background: #e2e2e2
+              border: 1px solid #a5a5a5
+                radius: 3px
+              text-align: center
+              line-height: 29px
+              font-size: 12px
+
+              &:not(:first-child)
+                margin-left: 5px
+
+              &.p-active
+                font-weight: 700
+                border-color: #081957
+                background: #f1dc87
+                color: #081957
+
         .header
-          position: absolute
-          top: 0
           width: 960px
           height: 35px
           background: #081957
+          border-top:
+            left-radius: 5px
+            right-radius: 5px
 
           p
             float: left
@@ -509,14 +572,16 @@ section.main-content
 
         .body
           width: 960px
-          max-height: 384px
+          max-height: 341px
           overflow-y: auto
-          margin-top: 35px
           border:
             width: 0 1px 1px 1px
             style: solid
             color: #d4d4d4
-          border-bottom-color: #adadad
+          border-bottom:
+            color: #adadad
+            left-radius: 5px
+            right-radius: 5px
 
           table
             width: 100%
@@ -538,7 +603,6 @@ section.main-content
                 a
                   font-weight: 700
                   color: #081957
-
 
         &.active
           display: block

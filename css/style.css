@@ -9,6 +9,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
+*:focus {
+  outline: none; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
@@ -392,12 +395,13 @@ section.main-content {
           list-style: decimal; }
           section.main-content .container .content-text-v2 .main-content-v2 ol li {
             font-size: 14px;
-            line-height: 20px; }
+            line-height: 20px;
+            text-align: justify; }
             section.main-content .container .content-text-v2 .main-content-v2 ol li:not(:first-child) {
               margin-top: 20px; }
             section.main-content .container .content-text-v2 .main-content-v2 ol li p.question {
               font-weight: 600;
-              color: #0000c1; }
+              color: #020d33; }
             section.main-content .container .content-text-v2 .main-content-v2 ol li .answer {
               margin-top: 10px; }
               section.main-content .container .content-text-v2 .main-content-v2 ol li .answer ul {
@@ -407,6 +411,19 @@ section.main-content {
                 section.main-content .container .content-text-v2 .main-content-v2 ol li .answer ul li {
                   margin: 0;
                   font-weight: 600; }
+      section.main-content .container .content-text-v2 .group-content {
+        padding-top: 20px; }
+        section.main-content .container .content-text-v2 .group-content p.g-title {
+          font-family: "Raleway", sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 5px; }
+        section.main-content .container .content-text-v2 .group-content .g-content p, section.main-content .container .content-text-v2 .group-content .g-content ol {
+          font-size: 14px;
+          line-height: 20px; }
+        section.main-content .container .content-text-v2 .group-content .g-content ol {
+          list-style: decimal;
+          margin-left: 15px; }
     section.main-content .container #main-links {
       position: absolute;
       right: 10px;
@@ -445,7 +462,7 @@ section.main-content {
       padding: 20px;
       position: relative; }
       section.main-content .container #main-content.hasil .tab-content {
-        top: 40px; }
+        top: 30px; }
       section.main-content .container #main-content .tab-content {
         position: absolute;
         top: 22px;
@@ -455,12 +472,46 @@ section.main-content {
         opacity: 0; }
         section.main-content .container #main-content .tab-content.five .header p, section.main-content .container #main-content .tab-content.five .body table tr td {
           width: 20%; }
+        section.main-content .container #main-content .tab-content .top-toolbar {
+          height: 50px;
+          width: 960px; }
+          section.main-content .container #main-content .tab-content .top-toolbar .search-bar {
+            float: left; }
+            section.main-content .container #main-content .tab-content .top-toolbar .search-bar input {
+              background-image: url("../images/search.png");
+              background-size: 23px 23px;
+              background-position: 2px 2px;
+              background-repeat: no-repeat;
+              font-size: 12px;
+              padding: 7px 10px 7px 28px;
+              width: 180px;
+              border: 1px solid #dadada;
+                border-radius: 3px; }
+          section.main-content .container #main-content .tab-content .top-toolbar .pagination {
+            float: right; }
+            section.main-content .container #main-content .tab-content .top-toolbar .pagination a {
+              display: inline-block;
+              height: 30px;
+              width: 30px;
+              background: #e2e2e2;
+              border: 1px solid #a5a5a5;
+                border-radius: 3px;
+              text-align: center;
+              line-height: 29px;
+              font-size: 12px; }
+              section.main-content .container #main-content .tab-content .top-toolbar .pagination a:not(:first-child) {
+                margin-left: 5px; }
+              section.main-content .container #main-content .tab-content .top-toolbar .pagination a.p-active {
+                font-weight: 700;
+                border-color: #081957;
+                background: #f1dc87;
+                color: #081957; }
         section.main-content .container #main-content .tab-content .header {
-          position: absolute;
-          top: 0;
           width: 960px;
           height: 35px;
-          background: #081957; }
+          background: #081957;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
           section.main-content .container #main-content .tab-content .header p {
             float: left;
             width: 33.33333333333333%;
@@ -472,13 +523,14 @@ section.main-content {
             color: #edcf57; }
         section.main-content .container #main-content .tab-content .body {
           width: 960px;
-          max-height: 384px;
+          max-height: 341px;
           overflow-y: auto;
-          margin-top: 35px;
           border-width: 0 1px 1px 1px;
           border-style: solid;
           border-color: #d4d4d4;
-          border-bottom-color: #adadad; }
+          border-bottom-color: #adadad;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px; }
           section.main-content .container #main-content .tab-content .body table {
             width: 100%; }
             section.main-content .container #main-content .tab-content .body table tr {
