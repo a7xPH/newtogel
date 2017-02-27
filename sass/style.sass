@@ -68,6 +68,21 @@ body
         line-height: 19px
         color: white
 
+=button-styles
+  margin-left: 160px
+  background: gold
+  border: 1px solid #bda106
+    radius: 4px
+  box-shadow: inset 0 2px 2px rgba(255,255,255,0.9)
+  height: 28px
+  width: 81px
+  color: #081957
+  font:
+    size: 12px
+    family: $raleway
+    weight: 600
+  text-transform: uppercase
+  letter-spacing: 1px
 .container
   width: 1000px
   margin: 0 auto
@@ -103,6 +118,7 @@ nav#top-navbar
 
       li
         line-height: 58px
+        box-shadow: none !important
 
         &.signin, &.daftar
           margin-top: -2px
@@ -389,12 +405,77 @@ section.main-content
       padding: 20px
 
       .main-title
+        margin-top: 5px
         font:
           size: 30px
           family: $raleway
         padding-bottom: 16px
         border-bottom: 1px solid #dadada
         color: #212121
+
+        &.center
+          text-align: center
+
+      .form
+        margin-top: 20px
+
+        form
+          display: table
+          margin: 0 auto
+
+          .holder
+            float: left
+
+            &:not(:first-child)
+              margin-left: 40px
+
+          .input-holder
+            font-size: 13px
+            margin: 23px 0
+            display: table
+
+            label
+              float: left
+              width: 160px
+              line-height: 29px
+
+            input, select
+              float: left
+              width: 180px
+              height: 28px
+              border: 1px solid #bdbdbd
+              padding: 0 8px
+              border-radius: 4px
+              +background(linear-gradient(#f5f5f5, white))
+
+            select
+              padding: 0 3px
+
+            p, .code
+              float: left
+
+            p
+              line-height: 29px
+              font:
+                family: $raleway
+                weight: 600
+
+            .code
+              display: table
+              width: 180px
+
+              input
+                width: 81px
+                float: left
+
+              .dummy
+                width: 93px
+                float: right
+                height: 28px
+                background: red
+
+          input[type="submit"]
+            +button-styles
 
       .main-content-v2
         padding-top: 20px
@@ -417,7 +498,7 @@ section.main-content
 
             .answer
               margin-top: 10px
-              
+
               ul
                 list-style: disc
                 margin:
@@ -523,7 +604,7 @@ section.main-content
                 position: 2px 2px
                 repeat: no-repeat
               font-size: 12px
-              padding: 7px 10px 7px 28px
+              padding: 7px 10px 7px 30px
               width: 180px
               border: 1px solid #dadada
                 radius: 3px
@@ -938,6 +1019,126 @@ footer
                 &.problem
                   color: #960000
                   +animation(2s offline linear infinite)
+
+section.modal
+  display: block
+  +position(fixed, (0,0,0,0))
+  z-index: -1
+  opacity: 0
+
+  .overlay
+    +position(fixed, (0,0,0,0))
+    background: rgba(0,0,0,0.7)
+    opacity: 0
+
+  .login-modal, .daftar-modal
+    display: none
+    opacity: 0
+    position: absolute
+    top: 18%
+    padding: 17px 20px 20px
+    left: 50%
+
+    a.close-modal
+      position: absolute
+      top: 18px
+      right: 20px
+      font:
+        size: 11px
+        weight: 700
+      text-transform: uppercase
+
+    p.modal-title
+      font:
+        size: 18px
+        family: $raleway
+      border-bottom: 1px solid #d0d0d0
+      padding-bottom: 7px
+
+  .login-modal
+    width: 300px
+    margin-left: -150px
+    background: white
+
+    form
+      padding-top: 20px
+      width: 100%
+
+      input[type="submit"]
+        +button-styles
+        margin: 18px 0 0
+        float: right
+
+      label
+        display: table
+        width: 100%
+        font-size: 14px
+
+        &:not(:first-child)
+          margin-top: 18px
+
+        p
+          font-family: $raleway
+          line-height: 27px
+          float: left
+
+        input
+          float: right
+          padding: 0px 7px
+          width: 170px
+          height: 28px
+          font-weight: 300
+          border: 1px solid #bdbdbd
+            radius: 3px
+          +background(linear-gradient(#f5f5f5, white))
+
+  .daftar-modal
+    width: 700px
+    margin-left: -350px
+    background: white
+
+    form
+      padding-top: 20px
+      width: 100%
+      display: table
+
+      .label-container
+        float: right
+        width: 49%
+
+        &:first-child
+          float: left
+
+        input[type="submit"]
+          +button-styles
+          margin: 18px 0 0
+          float: right
+
+      label
+        display: table
+        width: 100%
+        font-size: 14px
+
+        &:not(:first-child)
+          margin-top: 18px
+
+        p
+          font-family: $raleway
+          line-height: 27px
+          float: left
+
+        input,select
+          float: right
+          padding: 0px 7px
+          width: 170px
+          height: 28px
+          font-weight: 300
+          border: 1px solid #bdbdbd
+            radius: 3px
+          +background(linear-gradient(#f5f5f5, white))
+
+
+
 
 +keyframes(online)
   0%
