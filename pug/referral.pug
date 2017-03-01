@@ -1,0 +1,67 @@
+extends templates/layout
+
+block styles
+  link(rel="stylesheet" href="../css/style.css")
+
+  <!--[if IE 8]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+  <!--[if IE 9]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+
+block content
+  - var label = "Referral"
+
+  include templates/top-layout
+
+  section.main-content
+    .container
+      .content-text-v2
+        p.main-title Sistem Referral
+
+        .group-content
+          p.g-title Mau uang tambahan setiap harinya?
+
+          .g-content
+            p bumitogel.com memberikan layanan referral bagi anda yang menginginkan mendapatkan tambahan uang setiap harinya.
+            p Kami memberikan anda :
+            ol
+              li 4d : 1%
+              li 3d : 0.5%
+              li 2d : 0.5%
+            p Komisi diatas dapat berubah, silahkan login untuk mendapatkan detail komisi anda.
+            p Register id anda sekarang juga dan referensikan link anda serta dapatkan uang GRATIS setiap hari,
+
+        .group-content
+          p.g-title Cara mudah untuk memulai peluang mendapatkan uang jutaan rupiah setiap harinya
+
+          .g-content
+            p Daftar diri anda di situs togel online terpercaya bumitogel.com.
+            p Klik menu referral dan copy link referral anda.
+            p Sebarkan link referral anda ke forum, situs jejaring sosial, website, email dan blog.
+
+        .group-content
+          p.g-title Mau uang tambahan setiap harinya ?
+
+          .g-content
+            p Sebarkan link referral anda ke semua contact email teman anda.
+            p Posting komentar yang berisikan link referral anda di Facebook.
+            p Tweet link referral anda di Twitter.
+            p Sebarkan link referral anda ke forum-forum.
+
+        .group-content
+          p.g-title Mau uang tambahan setiap harinya ?
+
+          .g-content
+            p Login id anda ke bumitogel.com.
+            p Klik menu referral
+            p Untuk mengambil komisi anda dapat mengklik menu withdraw.
+
+  include templates/welcome
+  include templates/footer
+  include templates/modal
+
+block scripts
+  script(src="../js/tweenmax.js")
+  script(src="../js/app.js")

@@ -1,0 +1,28 @@
+include ../mixins/links
+
+nav#top-navbar
+  .container
+    p.name NusaTogel
+
+    ul
+      +listDataLinks
+
+      li.signin: a Sign In
+      li.daftar: a Daftar
+
+header
+  .container
+    .logo#logo
+
+    .navigation-menu
+      .top
+        .devices
+          p Available to
+          img.device(src= devicePath)
+
+        ul
+          li.signin: a Sign In
+          li.daftar: a Daftar
+
+      ul
+        +listDataLinks

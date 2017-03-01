@@ -1,0 +1,118 @@
+extends templates/layout
+
+block styles
+  link(rel="stylesheet" href="../css/style.css")
+
+  <!--[if IE 8]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+  <!--[if IE 9]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+
+
+block content
+  - var label = "Hasil Lengkap"
+
+  include templates/top-layout
+
+  section.main-content
+    .container
+      #main-links
+        a.active(data-index="0") Hasil Singapore
+        a(data-index="1") Hasil Dingdong Black - Red
+        a(data-index="2") Hasil Dingdong 36D
+        a(data-index="3") Hasil Dingdong 24D
+
+      #main-content.hasil
+        .tab-content.active
+          .top-toolbar
+            .search-bar
+              input(type="text" placeholder="Search...")
+
+            .pagination
+              a.p-active 1
+              a 2
+              a 3
+              a 4
+
+          include hasillengkap/sg
+
+        .tab-content.five
+          .top-toolbar
+            .search-bar
+              input(type="text" placeholder="Search...")
+
+            .pagination
+              a.p-active 1
+              a 2
+              a 3
+
+          include hasillengkap/br
+
+        .tab-content
+          .top-toolbar
+            .search-bar
+              input(type="text" placeholder="Search...")
+
+          include hasillengkap/36d
+
+        .tab-content
+          .top-toolbar
+            .search-bar
+              input(type="text" placeholder="Search...")
+
+            .pagination
+              a.p-active 1
+              a 2
+
+          include hasillengkap/24d
+
+  include templates/welcome
+  include templates/footer
+  include templates/modal
+
+block scripts
+  script(src="../js/tweenmax.js")
+  script(src="../js/app.js")
+
+  script.
+    var _mainLinks = document.getElementById("main-links"),
+      _isAnimatingMainTab = false,
+      _tables = document.getElementsByTagName("table");
+
+    for (var i = 0, e = _mainLinks.children; i < e.length; i++) {
+      e[i].style.zIndex = (10 - i);
+
+      e[i].onclick = function() {
+        if (!this.classList.contains("active") && !_isAnimatingMainTab) {
+          _isAnimatingMainTab = !_isAnimatingMainTab;
+          this.parentNode.querySelector(".active").classList.remove("active");
+          this.classList.add("active");
+
+          var _index = this.getAttribute("data-index"),
+            _contentParent = this.parentNode.nextElementSibling,
+            _currentActive = _contentParent.querySelector(".active"),
+            _nextActive = _contentParent.children[_index];
+
+          _nextActive.style.display = "block";
+
+          TweenMax.to(_currentActive, 0.3, {
+            opacity: 0,
+            onComplete: function() {
+              _currentActive.classList.remove("active");
+
+              _currentActive.style.display = "none";
+            }
+          });
+
+          TweenMax.to(_nextActive, 0.3, {
+            opacity: 1,
+            onComplete: function() {
+              _nextActive.classList.add("active");
+              _isAnimatingMainTab = !_isAnimatingMainTab;
+            }
+          });
+        }
+      }
+    }

@@ -1,0 +1,72 @@
+extends templates/layout
+
+block styles
+  link(rel="stylesheet" href="../css/style.css")
+
+  <!--[if IE 8]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+  <!--[if IE 9]>
+    link(rel="stylesheet" href="../css/ie-style.css")
+  <![endif]-->
+
+block content
+  - var label = "FAQ"
+
+  include templates/top-layout
+
+  section.main-content
+    .container
+      .content-text-v2
+        p.main-title Frequently Asked Questions
+
+        .main-content-v2
+          ol
+            li
+              p.question Bagaimana cara bermain di situs togel online indonesia www.nusatogel.com?
+              p.answer Untuk bisa bermain di situs nusatogel.com terlebih dahulu anda harus registrasi dengan cara klik menu daftar di halaman depan.
+
+            li
+              p.question Berapakah minimal deposit di www.nusatogel.com?
+              p.answer Minimal deposit di nusatogel.com adalah Rp 250.000,-
+
+            li
+              p.question Berapa lama waktu yang dibutuhkan agar deposit saya di konfirmasi?
+              p.answer Jika bank sedang online, proses deposit dapat kami proses sesegera mungkin, dengan catatan anda melakukan proses deposit dengan benar.
+
+            li
+              p.question Bagaimanakah cara yang tepat untuk melakukan konfirmasi deposit?
+              .answer
+                p Pastikan nomor rekening tujuan transfer anda sudah benar sesuai dengan yang tertera pada menu deposit dan selalu periksa terlebih dahulu sebelum melakukan transfer karena kami mengganti nomor rekening tujuan transfer secara rutin untuk menghindari antrian yang panjang.
+                p Jika anda tidak memiliki nama belakang unik (contoh nama : jono), anda diharuskan melakukan deposit dengan nominal yang unik dan bersifat rahasia agar tidak terjadi kesalahan proses dana deposit, contohnya deposit dengan nominal Rp 100.126,-
+                p Lakukan transfer sebelum melakukan konfirmasi.
+
+            li
+              p.question Kenapa memo saya terkadang lama/tidak dijawab?
+              p.answer Ada banyak sekali memo yang kami terima secara bersamaan dan membutuhkan waktu untuk memahami pertanyaan dan keluhan, lalu menjawab satu-persatu. Karena alasan efisiensi, kami tidak akan merespon memo yang bersifat pertanyaan-pertanyaan yang tidak berhubungan dengan teknis permainan, pertanyaan yang bersifat kasar dan menyerang.
+
+            li
+              p.question Tidak bisa mengakses www.indotg.inn karena di blokir nawala?
+              p.answer Anda bisa melihat cara untuk membuka blokir nawala, silahkan klik disini Nawala Unblocker
+
+            li
+              p.question Kenapa data bank harus diisi dengan benar ? Kemungkinan apa saja yang dapat terjadi dikemudian hari apabila saya tidak memberikan data bank yang benar?
+              .answer
+                p Kami membutuhkan data yang akurat agar deposit dan withdraw dapat diproses dengan lancar. Jika data yang diberikan tidak akurat, maka proses deposit akan membutuhkan waktu yang lebih lama dan kemungkinan withdraw tidak dapat diproses sampai anda memberikan informasi yang benar.
+
+                ul
+                  li Senin - Jumat ( hari kerja ) Pukul 21.00 WIB - 01.00 WIB
+                  li Sabtu 18.00 WIB - 20.00 WIB lalu dilanjutkan 23.59 WIB - 06.00 WIB
+                  li Minggu BCA tidak ada offline
+                  li Hari libur tanggal merah BCA tidak OFFLINE ( hari besar libur umum )
+                  li Jika BCA OFFLINE mendadak atau error mendadak. Itu diluar kuasa kami
+                  li Senin - Minggu Pukul 23.00 WIB - 04.00 WIB
+                  li Jika MANDIRI OFFLINE mendadak atau error mendadak. Itu diluar kuasa kami
+
+  include templates/welcome
+  include templates/footer
+  include templates/modal
+
+block scripts
+  script(src="../js/tweenmax.js")
+  script(src="../js/app.js")

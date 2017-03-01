@@ -1,0 +1,15 @@
+if (label == "Home")
+  - var links = [{name: "Home"}, {name: "Panduan", href: "html/panduan.html"}, {name: "Hasil Lengkap", href: "html/hasillengkap.html"}, {name: "FAQ", href: "html/faq.html"}, {name: "Nawala"}, {name: "Referral", href: "html/referral.html"}, {name: "Lupa Password", href: "html/lupapassword.html"}];
+  - var devicePath = "images/devices.png"
+  - var welcomePath = "images/welcome-img.png"
+else
+  - var links = [{name: "Home", href: "/"}, {name: "Panduan", href: "panduan.html"}, {name: "Hasil Lengkap", href: "hasillengkap.html"}, {name: "FAQ", href: "faq.html"}, {name: "Nawala", href: "#"}, {name: "Referral", href: "referral.html"}, {name: "Lupa Password", href: "lupapassword.html"}];
+  - var devicePath = "../images/devices.png"
+  - var welcomePath = "../images/welcome-img.png"
+
+mixin listDataLinks
+  each link, index in links
+    if (links[index].name == label)
+      li.active: a(href="#")= links[index].name
+    else
+      li: a(href=links[index].href)= links[index].name

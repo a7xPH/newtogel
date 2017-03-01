@@ -95,7 +95,7 @@ nav#top-navbar
   width: 100%
   height: 60px
   background: #dcb400
-  +background(linear-gradient(rgba(220, 180, 0, 0.92), rgba(177, 131, 25, 0.92)))
+  +background(linear-gradient(rgba(241, 221, 131, 0.92), rgba(191, 148, 49, 0.92)))
   box-shadow: 0px 2px 5px rgba(0,0,0,0.3)
   z-index: 9999
 
@@ -530,7 +530,7 @@ section.main-content
 
     #main-links
       position: absolute
-      right: 10px
+      left: 20px
       top: -23px
 
       a
@@ -1093,18 +1093,18 @@ section.modal
           +background(linear-gradient(#f5f5f5, white))
 
   .daftar-modal
-    width: 700px
+    width: 750px
     margin-left: -350px
     background: white
 
     form
-      padding-top: 20px
+      padding: 20px 10px 10px
       width: 100%
       display: table
 
       .label-container
         float: right
-        width: 49%
+        width: 48%
 
         &:first-child
           float: left
@@ -1137,6 +1137,80 @@ section.modal
             radius: 3px
           +background(linear-gradient(#f5f5f5, white))
 
+section.peraturan
+  .container
+    .logo
+      height: 120px
+      width: 200px
+      background: black
+
+    .peraturan-content
+      margin-top: 20px
+      background: white
+      padding: 24px 30px
+
+      .top-label
+        border-bottom: 1px solid #dcdcdc
+        padding-bottom: 13px
+
+        p.title
+          font:
+            family: $raleway
+            size: 28px
+          margin-bottom: 5px
+
+          span
+            font:
+              family: $open-sans
+              size: 13px
+
+        p.sub
+          font:
+            size: 14px
+            weight: 600
+
+      ol
+        list-style: decimal
+        margin:
+          top: 15px
+          left: 15px
+
+        li
+          line-height: 24px
+          text-align: justify
+          font-size: 14px
+
+      .buttons
+        margin:
+          top: 30px
+          bottom: 5px
+        text-align: center
+
+        button
+          cursor: pointer
+          margin: 0px 1px
+          padding: 7px 20px
+          border:
+            width: 1px
+            style: solid
+            radius: 4px
+          box-shadow: inset 0 1px rgba(255,255,255,0.5)
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+          font:
+            family: $raleway
+            size: 12px
+            weight: bold
+          color: white
+          letter-spacing: 1px
+          text-transform: uppercase
+
+          &.cancel
+            background: red
+            border-color: black
+
+          &.accept
+            background: green
+            border-color: black
 
 
 

@@ -1,0 +1,77 @@
+section.modal#modal
+  .overlay
+
+  .login-modal
+    a.close-modal close
+    p.modal-title Sign In to your account.
+
+    form
+      label
+        p Username
+        input(type="text")
+
+      label
+        p Password
+        input(type="password")
+
+      input(type="submit" value="Kirim")
+
+  .daftar-modal
+    a.close-modal close
+    p.modal-title Create Account.
+
+    form
+      .label-container
+        label
+          p Username
+          input(type="text")
+
+        label
+          p Password
+          input(type="password")
+
+        label
+          p Konfirmasi Password
+          input(type="password")
+
+        label
+          p Email
+          input(type="email")
+
+        label
+          p Telepon
+          input(type="text")
+
+        label
+          p Tanggal Lahir
+          input(type="text")
+
+      .label-container
+        label
+          p Nama Bank
+          select
+            option BCA
+            option Mandiri
+            option BRI
+            option BNI
+
+        label
+          p Nama Rekening Bank
+          input(type="text")
+
+        label
+          p Nomor Rekening Bank
+          input(type="text")
+
+        label
+          p Pertanyaan Keamanan
+          select
+            option 1
+            option 2
+            option 3
+
+        label
+          p Jawaban Keamanan
+          input(type="text")
+
+        input(type="submit" value="Kirim")

@@ -1,4 +1,6 @@
 (function() {
+  // andy - aaaa1111
+
   var _logo = document.getElementById("logo"),
     _logoHeight = _logo.clientHeight,
     _topNav = document.getElementById("top-navbar"),

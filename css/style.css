@@ -71,8 +71,8 @@ nav#top-navbar {
   width: 100%;
   height: 60px;
   background: #dcb400;
-  background: -webkit-linear-gradient(rgba(220, 180, 0, 0.92), rgba(177, 131, 25, 0.92));
-  background: linear-gradient(rgba(220, 180, 0, 0.92), rgba(177, 131, 25, 0.92));
+  background: -webkit-linear-gradient(rgba(241, 221, 131, 0.92), rgba(191, 148, 49, 0.92));
+  background: linear-gradient(rgba(241, 221, 131, 0.92), rgba(191, 148, 49, 0.92));
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 9999; }
   nav#top-navbar .container p.name {
@@ -489,7 +489,7 @@ section.main-content {
           margin-left: 15px; }
     section.main-content .container #main-links {
       position: absolute;
-      right: 10px;
+      left: 20px;
       top: -23px; }
       section.main-content .container #main-links a {
         padding: 7px 12px 5px;
@@ -951,16 +951,16 @@ section.modal {
           background: -webkit-linear-gradient(#f5f5f5, white);
           background: linear-gradient(#f5f5f5, white); }
   section.modal .daftar-modal {
-    width: 700px;
+    width: 750px;
     margin-left: -350px;
     background: white; }
     section.modal .daftar-modal form {
-      padding-top: 20px;
+      padding: 20px 10px 10px;
       width: 100%;
       display: table; }
       section.modal .daftar-modal form .label-container {
         float: right;
-        width: 49%; }
+        width: 48%; }
         section.modal .daftar-modal form .label-container:first-child {
           float: left; }
         section.modal .daftar-modal form .label-container input[type="submit"] {
@@ -999,6 +999,62 @@ section.modal {
             border-radius: 3px;
           background: -webkit-linear-gradient(#f5f5f5, white);
           background: linear-gradient(#f5f5f5, white); }
+
+section.peraturan .container .logo {
+  height: 120px;
+  width: 200px;
+  background: black; }
+
+section.peraturan .container .peraturan-content {
+  margin-top: 20px;
+  background: white;
+  padding: 24px 30px; }
+  section.peraturan .container .peraturan-content .top-label {
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 13px; }
+    section.peraturan .container .peraturan-content .top-label p.title {
+      font-family: "Raleway", sans-serif;
+      font-size: 28px;
+      margin-bottom: 5px; }
+      section.peraturan .container .peraturan-content .top-label p.title span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px; }
+    section.peraturan .container .peraturan-content .top-label p.sub {
+      font-size: 14px;
+      font-weight: 600; }
+  section.peraturan .container .peraturan-content ol {
+    list-style: decimal;
+    margin-top: 15px;
+    margin-left: 15px; }
+    section.peraturan .container .peraturan-content ol li {
+      line-height: 24px;
+      text-align: justify;
+      font-size: 14px; }
+  section.peraturan .container .peraturan-content .buttons {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: center; }
+    section.peraturan .container .peraturan-content .buttons button {
+      cursor: pointer;
+      margin: 0px 1px;
+      padding: 7px 20px;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 4px;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.5);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      font-family: "Raleway", sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 1px;
+      text-transform: uppercase; }
+      section.peraturan .container .peraturan-content .buttons button.cancel {
+        background: red;
+        border-color: black; }
+      section.peraturan .container .peraturan-content .buttons button.accept {
+        background: green;
+        border-color: black; }
 
 @-webkit-keyframes online {
   0% {
