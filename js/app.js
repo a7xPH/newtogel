@@ -10,13 +10,29 @@
     _overlay = document.querySelectorAll(".overlay"),
     _closeModal = document.querySelectorAll(".close-modal"),
     _holder = 0,
-    canClose = false;
+    canClose = false,
+    _loginForm = document.getElementById("loginForm");
+
+  if (_loginForm.elements.namedItem) {
+    var _loginUsername = _loginForm.elements.namedItem("username"),
+      _loginPassword = _loginForm.elements.namedItem("password");
+  }
+
+  _loginForm.onsubmit = function(e) {
+    e.preventDefault();
+
+    if(_loginUsername.value == "andy" && _loginPassword.value == "aaaa1111") {
+      window.location = "/html/peraturan.html"
+    }
+  }
 
   window.onscroll = function() {
     var _scr = this.scrollY || this.pageYOffset;
 
-    if(_scr >= _logoHeight) TweenMax.to(_topNav, 0.5, { top: 0 });
-    else TweenMax.to(_topNav, 0.5, { ease: Power2.easeOut, top: -60 });
+    console.log(_logoHeight)
+
+    if (_scr >= _logoHeight) TweenMax.to(_topNav, 0.5, { top: 0 });
+    else TweenMax.to(_topNav, 0.5, { top: -60 });
   }
 
   for (var i = 0; i < _signIn.length; i++) {

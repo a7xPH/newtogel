@@ -37,7 +37,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-a {
+a, input[type="submit"] {
   cursor: pointer;
   text-decoration: none;
   user-select: none; }

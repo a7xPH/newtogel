@@ -31,10 +31,21 @@ block content
           li Diharuskan kepada member untuk selalu perhatikan ada tidaknya berita penurunan pembayaran nomor pada masing-masing menu betting.
           li Minimal deposit dana adalah Rp.250rb apabila member mengirimkan dana di bawah minimal deposit maka kami nyatakan HANGUS dan tdk akan kami tambahkan lagi....
 
-        .buttons
+        .buttons#buttons
           button.cancel Batal
           button.accept Setuju
 
 
 block scripts
-  script(src="../js/tweenmax.js")
+  script.
+    var _buttonParent = document.getElementById("buttons");
+
+    /* cancel button listener */
+    _buttonParent.children[0].onclick = function() {
+      window.location = "/";
+    }
+
+    /* positive button listener */
+    _buttonParent.children[1].onclick = function() {
+      window.location = "/html/auth/games.html";
+    }

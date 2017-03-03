@@ -5,14 +5,14 @@ section.modal#modal
     a.close-modal close
     p.modal-title Sign In to your account.
 
-    form
+    form#loginForm
       label
         p Username
-        input(type="text")
+        input(type="text" name="username")
 
       label
         p Password
-        input(type="password")
+        input(type="password" name="password")
 
       input(type="submit" value="Kirim")
 

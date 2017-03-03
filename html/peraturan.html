@@ -27,13 +27,25 @@
             <li>Diharuskan kepada member untuk selalu perhatikan ada tidaknya berita penurunan pembayaran nomor pada masing-masing menu betting.</li>
             <li>Minimal deposit dana adalah Rp.250rb apabila member mengirimkan dana di bawah minimal deposit maka kami nyatakan HANGUS dan tdk akan kami tambahkan lagi....</li>
           </ol>
-          <div class="buttons">
+          <div class="buttons" id="buttons">
             <button class="cancel">Batal</button>
             <button class="accept">Setuju</button>
           </div>
         </div>
       </div>
     </section>
-    <script src="../js/tweenmax.js"></script>
+    <script>
+      var _buttonParent = document.getElementById("buttons");
+      
+      /* cancel button listener */
+      _buttonParent.children[0].onclick = function() {
+        window.location = "/";
+      }
+      
+      /* positive button listener */
+      _buttonParent.children[1].onclick = function() {
+        window.location = "/html/auth/games.html";
+      }
+    </script>
   </body>
 </html>

@@ -36,7 +36,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-a {
+a, input[type="submit"] {
   cursor: pointer;
   text-decoration: none;
   -webkit-user-select: none;
@@ -1050,11 +1050,11 @@ section.peraturan .container .peraturan-content {
       letter-spacing: 1px;
       text-transform: uppercase; }
       section.peraturan .container .peraturan-content .buttons button.cancel {
-        background: red;
-        border-color: black; }
+        background: #fd2020;
+        border-color: #6b0000; }
       section.peraturan .container .peraturan-content .buttons button.accept {
-        background: green;
-        border-color: black; }
+        background: #1e9c1e;
+        border-color: #002500; }
 
 @-webkit-keyframes online {
   0% {

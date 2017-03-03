@@ -75,44 +75,6 @@ block content
 block scripts
   script(src="../js/tweenmax.js")
   script(src="../js/app.js")
+  script(src="../js/links.js")
 
   script.
-    var _mainLinks = document.getElementById("main-links"),
-      _isAnimatingMainTab = false,
-      _tables = document.getElementsByTagName("table");
-
-    for (var i = 0, e = _mainLinks.children; i < e.length; i++) {
-      e[i].style.zIndex = (10 - i);
-
-      e[i].onclick = function() {
-        if (!this.classList.contains("active") && !_isAnimatingMainTab) {
-          _isAnimatingMainTab = !_isAnimatingMainTab;
-          this.parentNode.querySelector(".active").classList.remove("active");
-          this.classList.add("active");
-
-          var _index = this.getAttribute("data-index"),
-            _contentParent = this.parentNode.nextElementSibling,
-            _currentActive = _contentParent.querySelector(".active"),
-            _nextActive = _contentParent.children[_index];
-
-          _nextActive.style.display = "block";
-
-          TweenMax.to(_currentActive, 0.3, {
-            opacity: 0,
-            onComplete: function() {
-              _currentActive.classList.remove("active");
-
-              _currentActive.style.display = "none";
-            }
-          });
-
-          TweenMax.to(_nextActive, 0.3, {
-            opacity: 1,
-            onComplete: function() {
-              _nextActive.classList.add("active");
-              _isAnimatingMainTab = !_isAnimatingMainTab;
-            }
-          });
-        }
-      }
-    }
