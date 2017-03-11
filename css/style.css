@@ -71,8 +71,8 @@ nav#top-navbar {
   width: 100%;
   height: 60px;
   background: #dcb400;
-  background: -webkit-linear-gradient(rgba(241, 221, 131, 0.92), rgba(191, 148, 49, 0.92));
-  background: linear-gradient(rgba(241, 221, 131, 0.92), rgba(191, 148, 49, 0.92));
+  background: -webkit-linear-gradient(rgba(216, 180, 19, 0.92), #b79400);
+  background: linear-gradient(rgba(216, 180, 19, 0.92), #b79400);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 9999; }
   nav#top-navbar .container p.name {
@@ -381,6 +381,9 @@ section.main-content {
     background: white;
     position: relative;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5); }
+    section.main-content .container.container-lupa-pass {
+      min-height: 0;
+      padding-bottom: 15px; }
     section.main-content .container .content-text-v2 {
       padding: 20px; }
       section.main-content .container .content-text-v2 .main-title {
@@ -802,8 +805,8 @@ section.welcoming {
 footer {
   padding: 45px 0;
   background: #ffd574;
-  background: -webkit-linear-gradient(rgba(255, 231, 174, 0.93), #ffcc55);
-  background: linear-gradient(rgba(255, 231, 174, 0.93), #ffcc55); }
+  background: -webkit-linear-gradient(rgba(255, 237, 110, 0.93), #ffcc55);
+  background: linear-gradient(rgba(255, 237, 110, 0.93), #ffcc55); }
   footer .container {
     display: table; }
     footer .container .div-half {
